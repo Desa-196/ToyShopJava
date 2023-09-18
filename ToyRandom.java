@@ -1,7 +1,5 @@
 public class ToyRandom {
-    private int id;
-    private String name;
-    private int weight;
+    private 
 
     ToyRandom(int id, String name, int weight) {
         this.id = id;

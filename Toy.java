@@ -1,7 +1,16 @@
 public class Toy {
     private int id;
+    public int getId(){
+        return id;
+    }
     private String name;
+    public String getName(){
+        return name;
+    }
     private int weight;
+    public int getWeight(){
+        return weight;
+    }
 
     Toy(int id, String name, int weight) {
         this.id = id;
