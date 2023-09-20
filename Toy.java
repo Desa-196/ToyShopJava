@@ -1,14 +1,19 @@
 public class Toy {
     private int id;
-    public int getId(){
+
+    public int getId() {
         return id;
     }
+
     private String name;
-    public String getName(){
+
+    public String getName() {
         return name;
     }
+
     private int weight;
-    public int getWeight(){
+
+    public int getWeight() {
         return weight;
     }
 
@@ -17,12 +22,18 @@ public class Toy {
         this.name = name;
         this.weight = weight;
     }
+
     @Override
-        public boolean equals(Object obj) {
-            if (obj == null || obj.getClass() != this.getClass()) {
-                return false;
-            }
-            final Toy toy = (Toy) obj;
-            return toy.name == name && toy.id == id;
+    public boolean equals(Object obj) {
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
         }
+        final Toy toy = (Toy) obj;
+        return toy.name == name && toy.id == id;
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode() * 14 + id * 5;
+    }
 }
