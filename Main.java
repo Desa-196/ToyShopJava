@@ -11,5 +11,15 @@
  */
 
 public class Main {
+    public static void main(String args[]){
 
+        ToyRandom toyRandom = new ToyRandom();
+        toyRandom.put(new Toy(1, "Конструктор", 10));
+        toyRandom.put(new Toy(2, "Машинка", 20));
+        toyRandom.put(new Toy(3, "Кукла", 60));
+
+        for(int i=0; i<100; i++){
+            System.out.println(toyRandom.get().getName()); 
+        }
+    }
 }
