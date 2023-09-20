@@ -10,13 +10,14 @@ public class SaveCSV {
     }
 
     public void saveFile(ArrayList<Toy> arrayToy) throws IOException {
-        try (FileWriter writer = new FileWriter(file, false)){
-        for (Toy toy : arrayToy) {
-            writer.write(String.format("%s;%s", toy.getId(), toy.getName()) + "\n");
+        try (FileWriter writer = new FileWriter(file, false)) {
+            writer.write("id;Название игрушки\n");
+            for (Toy toy : arrayToy) {
+                writer.write(String.format("%s;%s", toy.getId(), toy.getName()) + "\n");
 
+            }
+            writer.flush();
         }
-        writer.flush();
-    }
 
     }
 }
